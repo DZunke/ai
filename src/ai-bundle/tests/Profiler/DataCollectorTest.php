@@ -262,10 +262,10 @@ class DataCollectorTest extends TestCase
             'Does Something Else'
         );
 
-        $toolbox1 = $this->createMock(ToolboxInterface::class);
+        $toolbox1 = $this->createStub(ToolboxInterface::class);
         $toolbox1->method('getTools')->willReturn([$tool1, $tool3]);
 
-        $toolbox2 = $this->createMock(ToolboxInterface::class);
+        $toolbox2 = $this->createStub(ToolboxInterface::class);
         $toolbox2->method('getTools')->willReturn([$tool2, $tool3]);
 
         $traceableToolbox1 = new TraceableToolbox($toolbox1);
@@ -295,10 +295,10 @@ class DataCollectorTest extends TestCase
             'Writer Agent'
         );
 
-        $toolbox1 = $this->createMock(ToolboxInterface::class);
+        $toolbox1 = $this->createStub(ToolboxInterface::class);
         $toolbox1->method('getTools')->willReturn([$tool1]);
 
-        $toolbox2 = $this->createMock(ToolboxInterface::class);
+        $toolbox2 = $this->createStub(ToolboxInterface::class);
         $toolbox2->method('getTools')->willReturn([$tool2]);
 
         $traceableToolbox1 = new TraceableToolbox($toolbox1);
